@@ -37,6 +37,7 @@
 # *color7: #d9d9d9
 # *color15: #ffffff" > .Xdefaults
 
-pacman -S fish --noconfirm
-
 chown -R vagrant:vagrant /home/vagrant
+
+pacman -S fish --noconfirm
+chsh -s /usr/bin/fish
