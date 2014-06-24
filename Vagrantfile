@@ -10,7 +10,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "archlinux-x86-64"
+  config.vm.box = "archlinux-x86_64"
 
   config.vm.provision "shell", path: "scripts/fish.sh"
 
@@ -51,7 +51,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provider "virtualbox" do |vb|
     # Don't boot with headless mode
     vb.gui = true
-  
+
     vb.name = "ArchieBox - Go"
 
     vb.memory = 2048
