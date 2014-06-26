@@ -1,4 +1,12 @@
-class puppet-archlinux-go::bootstrap {
+node default {
+  Package {
+    ensure => installed
+  }
+
+  Exec {
+    path => "/usr/bin"
+  }
+
   $packages = [
     "alsa-utils",
     "xorg-server",
@@ -9,6 +17,7 @@ class puppet-archlinux-go::bootstrap {
     "xorg-xclock",
     "xterm",
     "ttf-inconsolata",
+    "chromium",
   ]
 
   package {
@@ -25,4 +34,8 @@ class puppet-archlinux-go::bootstrap {
     recurse => true,
     force   => true,
   }
+
+  include fish
+  include dwm
+  include golang
 }

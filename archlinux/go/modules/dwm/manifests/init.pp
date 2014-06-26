@@ -1,4 +1,4 @@
-class puppet-archlinux-go::dwm {
+class dwm {
   $packages = [
     "base-devel",
     "dmenu",
