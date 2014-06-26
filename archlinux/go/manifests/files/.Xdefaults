@@ -1,3 +1,5 @@
+*faceName: Inconsolata
+*faceSize: 11
 *background: #0d1926
 *foreground: #d9e6f2
 *color0: #000000
@@ -15,4 +17,4 @@
 *color6: #7ab8b8
 *color14: #bddbdb
 *color7: #d9d9d9
-*color15: #ffffff
+*color15: #ffffff"

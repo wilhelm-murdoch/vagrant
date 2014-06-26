@@ -39,5 +39,5 @@
 
 chown -R vagrant:vagrant /home/vagrant
 
-pacman -S fish --noconfirm
-chsh -s /usr/bin/fish
+# pacman -S fish --noconfirm
+# chsh -s /usr/bin/fish
