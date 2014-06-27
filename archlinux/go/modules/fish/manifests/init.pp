@@ -12,20 +12,20 @@ class fish {
     ensure => present,
     owner  => "vagrant",
     group  => "vagrant",
-    source => "/etc/puppet/files/.Xdefaults",
+    source => "/vagrant/uploads/.Xdefaults",
   }
 
   file { "/home/vagrant/.config/fish/config.fish":
     ensure => present,
     owner  => "vagrant",
     group  => "vagrant",
-    source => "/etc/puppet/files/config.fish",
+    source => "/vagrant/uploads/config.fish",
   }
 
   file { "/home/vagrant/.config/fish/prompt.fish":
     ensure => present,
     owner  => "vagrant",
     group  => "vagrant",
-    source => "/etc/puppet/files/prompt.fish",
+    source => "/vagrant/uploads/prompt.fish",
   }
 }

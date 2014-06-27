@@ -1,0 +1,2 @@
+fishd: acquire_lock_file: timed out trying to obtain lockfile /tmp/fishd.socket.vagrant.lock using linkfile /tmp/fishd.socket.vagrant.lock.archlinux.vagrant.vm.1015
+fishd: Unable to obtain lock on socket, exiting

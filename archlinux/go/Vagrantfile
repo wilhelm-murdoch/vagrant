@@ -23,7 +23,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     vb.customize ["modifyvm", :id, "--hwvirtex", "on"]
   end
 
-  config.vm.synced_folder "uploads", "/etc/puppet/files"
   config.vm.provision "shell", path: "puppet.sh"
 
   config.vm.provision "puppet" do |puppet|

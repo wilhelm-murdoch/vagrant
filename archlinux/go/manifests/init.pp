@@ -24,6 +24,14 @@ node default {
     $packages:
   }
 
+  exec { "update_pacman_repositories":
+    command => "pacman -Su"
+  }
+
+  exec { "update_archlinux":
+    command => "pacman -Sy"
+  }
+
   exec { "setup_vbox_extensions":
     command => "modprobe -a vboxguest vboxsf"
   }
