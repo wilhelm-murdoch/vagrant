@@ -13,5 +13,7 @@ class dwm {
     ensure  => present,
     path    => "/home/vagrant/.xinitrc",
     content => "exec dwm",
+    owner   => "vagrant",
+    group   => "vagrant",
   }
 }

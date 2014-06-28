@@ -16,8 +16,8 @@ node default {
     "xorg-twm",
     "xorg-xclock",
     "xterm",
-    # "ttf-inconsolata",
-    # "chromium",
+    "ttf-inconsolata",
+    "chromium",
   ]
 
   exec { "update-repositories":
@@ -27,7 +27,6 @@ node default {
   exec { "update-system":
     command  => "pacman -Sy --noconfirm",
   }
-
 
   package { $packages:
     require => [
@@ -49,6 +48,6 @@ node default {
   }
 
   include fish
-  # include dwm
-  # include golang
+  include dwm
+  include golang
 }
