@@ -6,7 +6,7 @@ class chromium {
   package { $packages:
     require => [
       Exec["update-system"], 
-      Exec["update-repositories"]
+      Exec["update-repositories"],
     ],
   }
 
