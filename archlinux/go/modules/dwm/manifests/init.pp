@@ -9,7 +9,7 @@ class dwm {
     $packages:
   }
 
-  file { "set_default_wm":
+  file { "set-default-window-manager":
     ensure  => present,
     path    => "/home/vagrant/.xinitrc",
     content => "exec dwm",

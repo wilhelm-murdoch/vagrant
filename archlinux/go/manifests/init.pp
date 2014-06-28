@@ -16,27 +16,32 @@ node default {
     "xorg-twm",
     "xorg-xclock",
     "xterm",
-    "ttf-inconsolata",
-    "chromium",
+    # "ttf-inconsolata",
+    # "chromium",
   ]
 
-  package {
-    $packages:
+  exec { "update-repositories":
+    command  => "pacman -Su --noconfirm",
+  } 
+
+  exec { "update-system":
+    command  => "pacman -Sy --noconfirm",
   }
 
-  exec { "update_pacman_repositories":
-    command => "pacman -Su"
+
+  package { $packages:
+    require => [
+      Exec["update-system"], 
+      Exec["update-repositories"]
+    ]
   }
 
-  exec { "update_archlinux":
-    command => "pacman -Sy"
+  exec { "setup-virtualbox-guest-utils":
+    command => "modprobe -a vboxguest vboxsf",
+    require => Package["virtualbox-guest-utils"]
   }
 
-  exec { "setup_vbox_extensions":
-    command => "modprobe -a vboxguest vboxsf"
-  }
-
-  file { "cleanup_home":
+  file { "cleanup-home":
     path    => "/home/terry",
     ensure  => absent,
     recurse => true,
@@ -44,6 +49,6 @@ node default {
   }
 
   include fish
-  include dwm
-  include golang
+  # include dwm
+  # include golang
 }

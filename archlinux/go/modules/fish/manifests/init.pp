@@ -3,29 +3,23 @@ class fish {
     ensure => installed
   }
 
-  exec { "set_default_shell":
+  exec { "set-default-shell":
     command => "chsh -s /usr/bin/fish vagrant",
     require => Package["fish"],
   }
 
   file { "/home/vagrant/.Xdefaults":
     ensure => present,
-    owner  => "vagrant",
-    group  => "vagrant",
-    source => "/vagrant/uploads/.Xdefaults",
+    source => "/etc/puppet/files/.Xdefaults",
   }
 
   file { "/home/vagrant/.config/fish/config.fish":
     ensure => present,
-    owner  => "vagrant",
-    group  => "vagrant",
-    source => "/vagrant/uploads/config.fish",
+    source => "/etc/puppet/files/config.fish",
   }
 
   file { "/home/vagrant/.config/fish/prompt.fish":
     ensure => present,
-    owner  => "vagrant",
-    group  => "vagrant",
-    source => "/vagrant/uploads/prompt.fish",
+    source => "/etc/puppet/files/prompt.fish",
   }
 }

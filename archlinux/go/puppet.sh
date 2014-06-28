@@ -1,3 +1,4 @@
 #!/bin/bash
-
-# pacman -S puppet --noconfirm
+pacman -Su --noconfirm
+pacman -Sy --noconfirm
+pacman -S puppet --noconfirm
