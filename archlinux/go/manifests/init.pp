@@ -17,7 +17,6 @@ node default {
     "xorg-xclock",
     "xterm",
     "ttf-inconsolata",
-    "chromium",
   ]
 
   exec { "update-repositories":
@@ -47,6 +46,7 @@ node default {
     force   => true,
   }
 
+  include chromium
   include fish
   include dwm
   include golang
