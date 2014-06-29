@@ -50,4 +50,5 @@ node default {
   include fish
   include dwm
   include golang
+  include vim
 }
