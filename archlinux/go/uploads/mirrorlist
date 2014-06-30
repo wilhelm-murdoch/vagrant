@@ -1,0 +1,22 @@
+##
+## Arch Linux repository mirrorlist
+## Sorted by mirror score from mirror status page
+## Generated on 2014-06-30
+##
+
+## Score: 1.5, Australia
+Server = http://mirror.internode.on.net/pub/archlinux/$repo/os/$arch
+## Score: 1.8, Australia
+Server = http://mirror.aarnet.edu.au/pub/archlinux/$repo/os/$arch
+## Score: 2.1, Australia
+Server = http://ftp.swin.edu.au/archlinux/$repo/os/$arch
+## Score: 3.9, Australia
+Server = http://mirror.rackcentral.com.au/archlinux/$repo/os/$arch
+## Score: 4.3, Australia
+Server = http://archlinux.mirror.uber.com.au/$repo/os/$arch
+## Score: 4.7, Australia
+Server = http://mirror.optus.net/archlinux/$repo/os/$arch
+## Score: 12.7, Australia
+Server = http://syd.mirror.rackspace.com/archlinux/$repo/os/$arch
+## Score: 18.8, Australia
+Server = http://ftp.iinet.net.au/pub/archlinux/$repo/os/$arch

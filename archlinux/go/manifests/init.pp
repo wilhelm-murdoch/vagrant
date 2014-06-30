@@ -21,7 +21,7 @@ node default {
 
   exec { "update-repositories":
     command  => "pacman -Su --noconfirm",
-  } 
+  }
 
   exec { "update-system":
     command  => "pacman -Sy --noconfirm",
@@ -29,7 +29,7 @@ node default {
 
   package { $packages:
     require => [
-      Exec["update-system"], 
+      Exec["update-system"],
       Exec["update-repositories"]
     ]
   }
