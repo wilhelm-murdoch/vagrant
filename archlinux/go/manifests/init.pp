@@ -46,9 +46,10 @@ node default {
     force   => true,
   }
 
+  include locale
   include chromium
   include fish
-  include dwm
+  include i3
   include golang
   include vim
 }

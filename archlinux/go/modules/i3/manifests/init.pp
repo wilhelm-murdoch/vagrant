@@ -1,8 +1,8 @@
-class dwm {
+class i3 {
   $packages = [
-    "base-devel",
-    "dmenu",
-    "dwm",
+    "i3-wm",
+    "i3lock",
+    "i3status",
   ]
 
   package {
@@ -12,7 +12,7 @@ class dwm {
   file { "set-default-window-manager":
     ensure  => present,
     path    => "/home/vagrant/.xinitrc",
-    content => "exec dwm",
+    content => "exec i3",
     owner   => "vagrant",
     group   => "vagrant",
   }

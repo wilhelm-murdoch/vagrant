@@ -33,6 +33,16 @@ class vim {
     ],
   }
 
+  exec { "install-vim-go":
+    cwd     => "/home/vagrant/.vim/bundle",
+    user    => "vagrant",
+    command => "git clone https://github.com/fatih/vim-go.git",
+    require => [
+      Package["git"],
+      File["/home/vagrant/.vim/bundle"],
+    ],
+  }
+
   exec { "install-pathogen":
     command => "curl -LSso /home/vagrant/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim",
     user    => "vagrant",
