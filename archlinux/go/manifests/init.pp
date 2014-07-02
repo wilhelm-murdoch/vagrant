@@ -12,7 +12,6 @@ node default {
     "xorg-server",
     "xorg-server-utils",
     "xorg-xinit",
-    "virtualbox-guest-utils",
     "xorg-twm",
     "xorg-xclock",
     "xterm",
@@ -32,11 +31,6 @@ node default {
       Exec["update-system"],
       Exec["update-repositories"]
     ]
-  }
-
-  exec { "setup-virtualbox-guest-utils":
-    command => "modprobe -a vboxguest vboxsf",
-    require => Package["virtualbox-guest-utils"]
   }
 
   file { "cleanup-home":
