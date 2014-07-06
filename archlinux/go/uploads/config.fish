@@ -13,3 +13,5 @@ set fish_git_dirty_color red
 set fish_git_not_dirty_color magenta
 
 . $HOME/.config/fish/prompt.fish
+
+feh --bg-tile /vagrant/uploads/office.png
