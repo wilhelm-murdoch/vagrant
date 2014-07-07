@@ -16,6 +16,7 @@ class vim {
   file { [
       "/home/vagrant/.vim",
       "/home/vagrant/.vim/bundle",
+      "/home/vagrant/.vim/colors",
       "/home/vagrant/.vim/autoload",
     ]:
     ensure  => directory,
@@ -23,14 +24,10 @@ class vim {
     owner   => "vagrant",
   }
 
-  exec { "install-solarized-theme":
-    cwd     => "/home/vagrant/.vim/bundle",
-    user    => "vagrant",
-    command => "git clone https://github.com/altercation/vim-colors-solarized.git",
-    require => [
-      Package["git"],
-      File["/home/vagrant/.vim/bundle"],
-    ],
+  file { "/home/vagrant/.vim/colors/molokai.vim":
+    ensure  => present,
+    source  => "/etc/puppet/files/molokai.vim",
+    require => File["/home/vagrant/.vim/colors"],
   }
 
   exec { "install-vim-go":

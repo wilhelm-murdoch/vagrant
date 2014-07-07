@@ -1,8 +1,8 @@
 execute pathogen#infect()
 
-syntax enable
-set background=dark
-colorscheme solarized
+set number
+let g:go_disable_autoinstall = 0
+let g:molokai_original = 1
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -49,6 +49,7 @@ filetype plugin indent on    " required
 
 set nocompatible
 syntax on
+syntax enable
 filetype on
 filetype plugin on
 filetype indent on
@@ -100,9 +101,9 @@ if has('gui_running')
   " Turn off toolbar and menu
   set guioptions-=T
   set guioptions-=m
-  colorscheme inkpot
+  colorscheme molokai
 else
-  colorscheme desert
+  colorscheme molokai
 end
 
 " Change <Leader>
