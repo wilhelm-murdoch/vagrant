@@ -3,12 +3,7 @@ class chromium {
     "chromium"
   ]
 
-  package { $packages:
-    require => [
-      Exec["update-system"],
-      Exec["update-repositories"],
-    ],
-  }
+  package { $packages: }
 
   exec { "install-chromium-flash-plugin":
   	command => "yaourt -S chromium-pepper-flash --noconfirm",

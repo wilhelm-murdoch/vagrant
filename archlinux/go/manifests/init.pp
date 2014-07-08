@@ -18,20 +18,7 @@ node default {
     "ttf-inconsolata",
   ]
 
-  exec { "update-repositories":
-    command  => "pacman -Su --noconfirm",
-  }
-
-  exec { "update-system":
-    command  => "pacman -Sy --noconfirm",
-  }
-
-  package { $packages:
-    require => [
-      Exec["update-system"],
-      Exec["update-repositories"]
-    ]
-  }
+  package { $packages: }
 
   file { "cleanup-home":
     path    => "/home/terry",
